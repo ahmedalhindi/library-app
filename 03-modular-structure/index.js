@@ -1,5 +1,5 @@
 const { ApolloServer} = require("apollo-server")
-const {makeExecutableSchema, mergeSchemas} = require('graphql-tools')
+
 
 // create a memory db
 //* Plese note this would be replaced by a mongo db for example
@@ -23,13 +23,8 @@ const db = {
 }
 
 
-const schema = mergeSchemas({
-    schemas:require('./api')
-})
-
-
 const server = new ApolloServer({
-  schema
+  schema : require('./api')
 })
 
 server.listen().then(({ url }) => {

@@ -1,4 +1,5 @@
 const { makeExecutableSchema } = require("apollo-server-express")
+const {mergeSchemas} = require('graphql-tools')
 const fs = require("fs")
 
 
@@ -17,4 +18,4 @@ resources.map((resource) => {
   }
 })
 
-module.exports = schemas
+module.exports = mergeSchemas({schemas})
