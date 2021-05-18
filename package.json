@@ -18,5 +18,8 @@
     "mongo"
   ],
   "author": "ahmedalhindi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^15.5.0"
+  }
 }
