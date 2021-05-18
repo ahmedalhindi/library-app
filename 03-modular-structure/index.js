@@ -1,6 +1,5 @@
 const { ApolloServer} = require("apollo-server")
 const {makeExecutableSchema, mergeSchemas} = require('graphql-tools')
-const {merge} = require('lodash')
 
 // create a memory db
 //* Plese note this would be replaced by a mongo db for example
@@ -23,27 +22,14 @@ const db = {
   ]
 }
 
-// create the schema
-// moved to respective /api/resource/schema.js
-const bookSchema = makeExecutableSchema({
-    typeDefs: require('./api/book/schema'),
-    resolvers: require('./api/book/resolvers')
-})
-const authorSchema = makeExecutableSchema({
-    typeDefs: require('./api/author/schema'),
-    resolvers: require('./api/author/resolvers')
-})
 
 const schema = mergeSchemas({
-    schemas:[
-        bookSchema,
-        authorSchema
-    ]
+    schemas:require('./api')
 })
 
 
 const server = new ApolloServer({
-  schema: schema
+  schema
 })
 
 server.listen().then(({ url }) => {
