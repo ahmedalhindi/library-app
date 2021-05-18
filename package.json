@@ -1,0 +1,22 @@
+{
+  "name": "library-app",
+  "version": "1.0.0",
+  "description": "a simple book auther app using graphql and apollo server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "graphql",
+    "api",
+    "apollo",
+    "simple",
+    "getting",
+    "started",
+    "tutorial",
+    "mongoose",
+    "mongo"
+  ],
+  "author": "ahmedalhindi",
+  "license": "ISC"
+}
