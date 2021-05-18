@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "01": "nodemon ./01-helloWorld-graphql",
-    "02": "nodemon ./02-hello-apollo"
+    "02": "nodemon ./02-hello-apollo",
+    "03": "nodemon ./03-modular-structure"
   },
   "keywords": [
     "graphql",
@@ -25,6 +26,7 @@
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
-    "graphql-tools": "^4.0.8"
+    "graphql-tools": "^4.0.8",
+    "lodash": "^4.17.21"
   }
 }
