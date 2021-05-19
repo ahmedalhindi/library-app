@@ -6,6 +6,6 @@ module.exports = gql(`
   }
   type Query {
     authors:[Author]
-    authorIdx(idx:ID!): Author
+    authorId(id:ID!): Author
   }
 `)

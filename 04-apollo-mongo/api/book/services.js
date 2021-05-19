@@ -4,7 +4,7 @@ exports.findall = async ()=>{
     return await Book.find()
 }
 
-exports.findIdx = async (id)=>{
+exports.findId = async (id)=>{
     return await Book.findOne({_id:id})
 }
 

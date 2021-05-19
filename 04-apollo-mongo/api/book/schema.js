@@ -8,7 +8,7 @@ module.exports = gql(`
   }
   type Query {
     books:[Book]
-    bookIdx(idx:ID!): Book
+    bookId(id:ID!): Book
   }
   type Mutation {
     postBook(title:String): Book

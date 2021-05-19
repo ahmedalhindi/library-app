@@ -1,11 +1,8 @@
+const author = require('./services')
 // create the resolvers
 module.exports = {
     Query: {
-      authors: () => {
-        return db.authors
-      },
-      authorIdx: ({ idx }) => {
-        return db.authors[idx]
-      },
+      authors: () => author.findall(),
+      authorId: (__,{ id }) => author.findId(id),
     }
   }
