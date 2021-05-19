@@ -4,9 +4,9 @@ const book = require('./services')
 module.exports = {
     Query: {
       books: () => book.findall(),
-      bookId: (__,{ id }) => book.findIdx(id)
+      bookId: (__,{ id }) => book.findId(id)
     },
     Mutation: {
-      postBook: async (__,{title}) => book.new(title)
+      postBook: (__,{title}) => book.new(title)
     },
   }

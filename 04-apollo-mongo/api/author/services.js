@@ -11,7 +11,7 @@ exports.findId = async (id)=>{
 exports.new = async({name, age})=>{
     let author = new Author({
         name,
-        age
+        age,
     })
     return await author.save()
 }

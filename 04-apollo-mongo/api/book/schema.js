@@ -2,7 +2,7 @@ const { gql } = require("apollo-server")
 
 module.exports = gql(` 
  type Book {
-    id:ID
+    _id:ID
     title: String!
 
   }
