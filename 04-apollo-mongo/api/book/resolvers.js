@@ -1,20 +1,13 @@
 // import db model
 const {Book} = require('./model')
+const book = require('./services')
 // create the resolvers
 module.exports = {
     Query: {
-      books: async() => {
-        const res = await Book.find({})
-        return res
-      },
-      bookIdx: ({ idx }) => {
-        return db.books[idx]
-      },
+      books: () => book.findall(),
+      bookIdx: (__,{ idx }) => book.findIdx(idx)
     },
     Mutation: {
-      postBook: ({ title }) => {
-        db.books.push({ title })
-        return db.books
-      },
+      postBook: async (__,{title}) => book.new(title)
     },
   }
