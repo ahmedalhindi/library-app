@@ -1,6 +1,5 @@
-// import db model
-const {Book} = require('./model')
 const book = require('./services')
+
 // create the resolvers
 module.exports = {
     Query: {
