@@ -5,6 +5,7 @@
   "scripts": {
     "01": "nodemon ./01-helloWorld-graphql",
     "02": "nodemon ./02-hello-apollo",
+    "021": "nodemon ./021-relationships",
     "03": "nodemon ./03-modular-structure",
     "04": "nodemon ./04-apollo-mongo",
     "blank": ""
